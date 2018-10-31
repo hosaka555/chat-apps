@@ -9,8 +9,8 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - .:/usr/src/project_name
-      - bundle:/bundle
+      - .:/usr/src/chat-apps
+      - bundle_install:/usr/local/bundle
     links:
       - mysql
   mysql:
@@ -24,5 +24,4 @@ services:
 volumes:
   mysql-data:
     driver: local
-  bundle:
-    driver: local
+  bundle_install:

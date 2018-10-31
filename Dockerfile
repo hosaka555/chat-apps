@@ -1,7 +1,7 @@
 FROM ruby:2.4.1
 
 ENV APP_ROOT /usr/src/chat-apps
-
+ENV BUNDLE_PATH /bundle
 WORKDIR $APP_ROOT
 
 RUN apt-get update && \
