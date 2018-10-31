@@ -8,9 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-gem 'mysql2'
+
+gem "mysql2", ">= 0.3.18", "< 0.5"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -53,7 +52,9 @@ group :development,:test do
   gem "factory_bot_rails"
   gem "rspec-rails","~> 3.7"
 end
-
-
+gem "jquery-rails"
+gem "slim-rails"
+gem 'sorcery'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
