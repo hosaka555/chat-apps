@@ -10,7 +10,7 @@ services:
       - '3000:3000'
     volumes:
       - .:/usr/src/chat-apps
-      - bundle_install:/usr/local/bundle
+      - bundle:/bundle
     links:
       - mysql
   mysql:
@@ -24,4 +24,5 @@ services:
 volumes:
   mysql-data:
     driver: local
-  bundle_install:
+  bundle:
+    driver: local
