@@ -49,6 +49,7 @@ group :development do
 end
 
 group :development,:test do
+  gem "pry-byebug"
   gem "pry-rails"
   gem "factory_bot_rails"
   gem "rspec-rails","~> 3.7"
@@ -56,6 +57,7 @@ group :development,:test do
 end
 gem "jquery-rails"
 gem "slim-rails"
+gem "html2slim"
 gem 'sorcery'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

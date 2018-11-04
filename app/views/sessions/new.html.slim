@@ -1,0 +1,17 @@
+- provide(:title,"ログイン")
+
+.layout
+  .login-box
+    = image_tag("common/logo.png",class: "login__image")
+  .login-form
+    = form_with model: @user, url: create_login_path do |f|
+      .login-form__input
+        = f.label :email
+        = f.email_field :email
+      .login-form__input
+        = f.label :password
+        = f.password_field :password
+      .login-form__submit
+        = f.submit "ログイン"
+    
+  

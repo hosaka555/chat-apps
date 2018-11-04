@@ -4,7 +4,7 @@ RSpec.describe "Users", type: :request do
   let(:user) {FactoryBot.build(:user)}
   describe "#new" do
     it "ステータス200が返ってくること" do
-      get new_user_path
+      get signup_path
       expect(response.status).to eq 200
     end
   end

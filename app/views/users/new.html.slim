@@ -1,2 +1,23 @@
-h1 Users#new
-p Find me in app/views/users/new.html.slim
+- provide(:title,"signup")
+
+.layout-container
+  .signup-box
+    = image_tag("common/logo.png",class: "signup__image")
+    .signup-form
+      = form_with model: @user,url: create_user_path do |f|
+        .signup-form__input
+          = f.label :user_name
+          = f.text_field :user_name
+        .signup-form__input
+          = f.label :email
+          = f.email_field :email
+        .signup-form__input
+          = f.label :password
+          = f.password_field :password
+        .signup-form__input
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation
+        .signup-form__submit
+          = f.submit "登録"
+
+    = link_to "アカウントをお持ちの方はこちら", login_path

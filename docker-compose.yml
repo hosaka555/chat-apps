@@ -11,6 +11,8 @@ services:
     volumes:
       - .:/usr/src/chat-apps
       - bundle:/bundle
+    tty: true
+    stdin_open: true
     links:
       - mysql
   mysql:
