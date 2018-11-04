@@ -2,16 +2,14 @@ class SessionsController < ApplicationController
   skip_before_action :require_login, expect: :destroy
 
   def new
-    binding.pry
+    @user = User.new
   end
 
   def create
-    @user = login(params[:email], params[:password])
+    @user = login(params[:user][:email], params[:user][:password])
     if @user
-      flash[:success] = "ログインしました"
-      redirect_back_or_to mypage_path(@user.user_name)
+      redirect_back_or_to(root_path)
     else
-      flash.now[:danger] = "ログインに失敗しました"
       render :new
     end
   end

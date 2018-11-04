@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       flash[:success]  = "ユーザーを登録しました"
     else
       render :new
-      flash[:danger].now = "ユーザー登録に失敗しました"
+      flash.now[:danger] = "ユーザー登録に失敗しました"
     end
   end
 

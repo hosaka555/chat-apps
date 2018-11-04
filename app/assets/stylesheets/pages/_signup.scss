@@ -11,14 +11,14 @@
   
   &-form {
     margin: 30px auto;
-    width: 300px;
+    width: 350px;
     &__input {
       display: block;
       & label {
         float: left;
       }
 
-      &input {
+      & input {
         float: right;
       }
 

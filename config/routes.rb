@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # login
   get "login" => "sessions#new", as: :login
   post "login" => "sessions#create", as: :create_login
-  get "login" => "sessions#destroy", as: :logout
+  get "logout" => "sessions#destroy", as: :logout
 
   get "users/:user_name/mypage" => "mypages#show",as: :mypage
 end

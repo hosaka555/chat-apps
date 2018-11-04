@@ -52,9 +52,10 @@ RSpec.describe "Users", type: :request do
       it "再度サインアップ画面が表示されること" do
         expect(subject).to render_template(:new)
       end
+
       it "ユーザー登録に失敗しましたというメッセージが表示されること" do
         subject
-        expect(flash[:danger]).to eq "ユーザー登録に失敗しました"
+        expect(flash.now[:danger]).to eq "ユーザー登録に失敗しました"
       end
     end
   end
